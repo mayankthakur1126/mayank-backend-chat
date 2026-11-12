@@ -1,16 +1,14 @@
+
 {
-  "name": "m",
+  "name": "chat-backend",
   "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
+  "description": "Chat backend using TypeScript, MySQL and Firebase",
+  "main": "dist/server.js",
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon server.js"
+    "dev": "tsx watch server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "module",
   "dependencies": {
     "bcryptjs": "^3.0.3",
     "cors": "^2.8.6",
@@ -18,12 +16,15 @@
     "express": "^5.2.1",
     "firebase-admin": "^14.4.0",
     "jsonwebtoken": "^9.0.3",
-    "mongoose": "^9.9.2",
     "mysql2": "^3.24.4",
     "sequelize": "^6.37.8",
     "socket.io": "^4.8.3"
   },
   "devDependencies": {
-    "nodemon": "^3.1.14"
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
   }
 }
